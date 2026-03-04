@@ -29,5 +29,12 @@ To evaluate the representations before and after the projector run:
 ./projektors/eval_models.sh
 ```
 
+Go inside every directory ```model-dataset/mlp``` and ```model-dataset/transformer``` and run the ```results.ipynb``` notebook to see the results. Example ```/projektors/llava-agri/mlp/results.ipynb```
+
+Intermediate results can be found in: ```/projektors/model-dataset/auxiliarymodel/results.ipynb```
+
+Final tables can be found in : ```/projektors/results.xlsx```
+
+Model architectures can be found in: ```/projektors/models```
 
 
