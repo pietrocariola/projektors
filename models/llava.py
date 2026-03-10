@@ -83,7 +83,7 @@ class CustomModel(LlavaForConditionalGeneration):
 
         kwargs = {k: v for k, v in kwargs.items() if v is not None}
         # this is not memory efficient at all (output_hidden_states=True) will save all the hidden states.
-        image_outputs = self.vision_tower(pixel_values, output_hidden_states=True, **kwargs)
+        image_outputs = self.model.vision_tower(pixel_values, output_hidden_states=True, **kwargs)
 
         # If we have one vision feature layer, return the corresponding hidden states,
         # otherwise, select the hidden states of each feature layer and concatenate them
@@ -103,7 +103,7 @@ class CustomModel(LlavaForConditionalGeneration):
         # pre projection early exit
         pre_proj_exit = selected_image_feature
 
-        image_features = self.multi_modal_projector(selected_image_feature)
+        image_features = self.model.multi_modal_projector(selected_image_feature)
         post_proj_exit = image_features
 
         # post projector normal exit
