@@ -13,12 +13,6 @@ cd /your/path/to/projektors
 cd ..
 ```
 
-Run ```agri.py``` and ```derm.py``` to create the datasets' jsons:
-```bash
-python -m projektors.datasets.agri
-python -m projektors.datasets.derm
-```
-
 In order to train the auxiliary models run:
 ```bash
 ./projektors/train_models.sh
@@ -31,10 +25,9 @@ To evaluate the representations before and after the projector run:
 
 Go inside every directory ```model-dataset/mlp``` and ```model-dataset/transformer``` and run the ```results.ipynb``` notebook to see the results. Example ```/projektors/llava-agri/mlp/results.ipynb```
 
-Intermediate results can be found in: ```/projektors/model-dataset/auxiliarymodel/results.ipynb```
-
 Final tables can be found in : ```/projektors/results.xlsx```
 
-Model architectures can be found in: ```/projektors/models```
+Datasets splits can be found in: ```/projektors/datasets```
 
+Model architectures can be found in: ```/projektors/models```
 
