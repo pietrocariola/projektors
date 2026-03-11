@@ -1,6 +1,23 @@
 Clone the repository:
 ```bash
 git clone https://github.com/pietrocariola/projektors.git
+cd projektors
+```
+
+Create a virtual environment:
+
+```bash
+conda create -n projektors
+conda activate projektors
+pip install -r requirements.txt
+```
+
+Or:
+
+```bash
+python -m venv projektors
+source projektors/bin/activate
+pip install -r requirements.txt
 ```
 
 Download the datasets from their original sources: [PlantDoc](https://github.com/pratikkayal/PlantDoc-Dataset), [Dermnet](https://www.kaggle.com/datasets/shubhamgoel27/dermnet).
